@@ -40,7 +40,7 @@ public class NinjaService {
         ninjaRepository.deleteById(id);
     }
 
-    public NinjaDTO atulizarNinja(Long id, NinjaDTO ninjaDTO) {
+    public NinjaDTO atualizarNinja(Long id, NinjaDTO ninjaDTO) {
         Optional<NinjaModel> ninjaExistente = ninjaRepository.findById(id);
         if (ninjaExistente.isPresent()) {
             NinjaModel ninjaAtualizado = ninjaMapper.map(ninjaDTO);
