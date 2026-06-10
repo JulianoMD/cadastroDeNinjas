@@ -5,17 +5,14 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
-
-// Entity ele transforma uma classe em uma entidade do BD
-// JPA = Java Persistence API
+import lombok.ToString;
 
 @Entity
 @Table(name = "tb_cadastro")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString(exclude = "missoes") // para não imprimir a lista de missões quando imprimir o ninja
 public class NinjaModel {
 
     @Id
